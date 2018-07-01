@@ -21,6 +21,17 @@ class ComposerStaticInit7d96ff8b77cffdab4894e2320d8a7108
     );
 
     public static $classMap = array (
+        'PattonWebz\\TwitterScheduler\\Admin\\AbstractAdminSubpage' => __DIR__ . '/../..' . '/inc/classes/admin/abstractadminsubpage.php',
+        'PattonWebz\\TwitterScheduler\\Admin\\Page\\Debug' => __DIR__ . '/../..' . '/inc/classes/admin/page/debug.php',
+        'PattonWebz\\TwitterScheduler\\Admin\\Page\\Settings' => __DIR__ . '/../..' . '/inc/classes/admin/page/settings.php',
+        'PattonWebz\\TwitterScheduler\\Admin\\Page\\SettingsAdvanced' => __DIR__ . '/../..' . '/inc/classes/admin/page/settingsadvanced.php',
+        'PattonWebz\\TwitterScheduler\\Admin\\TweetsListMods' => __DIR__ . '/../..' . '/inc/classes/admin/tweetslistmods.php',
+        'PattonWebz\\TwitterScheduler\\Metabox\\AbstractMetaBox' => __DIR__ . '/../..' . '/inc/classes/metabox/abstractmetabox.php',
+        'PattonWebz\\TwitterScheduler\\Metabox\\RetweetBox' => __DIR__ . '/../..' . '/inc/classes/metabox/retweetbox.php',
+        'PattonWebz\\TwitterScheduler\\Metabox\\TweetBox' => __DIR__ . '/../..' . '/inc/classes/metabox/tweetbox.php',
+        'PattonWebz\\TwitterScheduler\\PostType\\Tweets' => __DIR__ . '/../..' . '/inc/classes/posttype/tweets.php',
+        'PattonWebz\\TwitterScheduler\\Tweet' => __DIR__ . '/../..' . '/inc/classes/tweet.php',
+        'PattonWebz\\TwitterScheduler\\TwitterInteractions' => __DIR__ . '/../..' . '/inc/classes/twitterinteractions.php',
         'TwitterAPIExchange' => __DIR__ . '/..' . '/j7mbo/twitter-api-php/TwitterAPIExchange.php',
     );
 

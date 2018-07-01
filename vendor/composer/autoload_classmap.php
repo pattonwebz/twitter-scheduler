@@ -6,5 +6,16 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'PattonWebz\\TwitterScheduler\\Admin\\AbstractAdminSubpage' => $baseDir . '/inc/classes/admin/abstractadminsubpage.php',
+    'PattonWebz\\TwitterScheduler\\Admin\\Page\\Debug' => $baseDir . '/inc/classes/admin/page/debug.php',
+    'PattonWebz\\TwitterScheduler\\Admin\\Page\\Settings' => $baseDir . '/inc/classes/admin/page/settings.php',
+    'PattonWebz\\TwitterScheduler\\Admin\\Page\\SettingsAdvanced' => $baseDir . '/inc/classes/admin/page/settingsadvanced.php',
+    'PattonWebz\\TwitterScheduler\\Admin\\TweetsListMods' => $baseDir . '/inc/classes/admin/tweetslistmods.php',
+    'PattonWebz\\TwitterScheduler\\Metabox\\AbstractMetaBox' => $baseDir . '/inc/classes/metabox/abstractmetabox.php',
+    'PattonWebz\\TwitterScheduler\\Metabox\\RetweetBox' => $baseDir . '/inc/classes/metabox/retweetbox.php',
+    'PattonWebz\\TwitterScheduler\\Metabox\\TweetBox' => $baseDir . '/inc/classes/metabox/tweetbox.php',
+    'PattonWebz\\TwitterScheduler\\PostType\\Tweets' => $baseDir . '/inc/classes/posttype/tweets.php',
+    'PattonWebz\\TwitterScheduler\\Tweet' => $baseDir . '/inc/classes/tweet.php',
+    'PattonWebz\\TwitterScheduler\\TwitterInteractions' => $baseDir . '/inc/classes/twitterinteractions.php',
     'TwitterAPIExchange' => $vendorDir . '/j7mbo/twitter-api-php/TwitterAPIExchange.php',
 );
