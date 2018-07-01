@@ -9,6 +9,9 @@
  * @license         http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
+/**
+ * Copy post function.
+ */
 function twscCopyPost( e ) {
 	e.preventDefault()
 	var ajax_url = twsc_copy.ajax_url;
@@ -20,7 +23,7 @@ function twscCopyPost( e ) {
 			'_wpnonce': e.currentTarget.dataset.nonce,
 		},
 		function(response) {
-			console.log('The server responded: ', response);
+			console.log( 'The server responded: ', response );
 			window.location.href = 'http://local.sandbox/wp-admin/post.php?post=' + response + '&action=edit'
 		}
 	);

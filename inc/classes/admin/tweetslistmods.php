@@ -204,11 +204,12 @@ class TweetsListMods {
 	 */
 	public function ajax_copy_tweet() {
 
-		check_admin_referer( 'twsc_duplicate_' . $_POST['postID'] );
-
-		if ( ! isset( $_POST['postID'] ) ) {
-			return;
+		// if a nonce and post id wasn't passed to use return early.
+		if ( ! isset( $_POST['postID'] ) || ! isset( $_POST['_wpnonce'] ) ) {
+			wp_die();
 		}
+
+		check_admin_referer( 'twsc_duplicate_' . sanitize_text_field( wp_unslash( $_POST['postID'] ) ) );
 
 		$post_id = absint( wp_unslash( $_POST['postID'] ) );
 		// Make your response and echo it.

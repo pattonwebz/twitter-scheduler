@@ -131,6 +131,7 @@ class Settings extends AbstractAdminSubpage {
 
 	/**
 	 * Echos a title above certain sections.
+	 *
 	 * @since  0.1.0
 	 */
 	public function section_callback() {
@@ -141,6 +142,7 @@ class Settings extends AbstractAdminSubpage {
 
 	/**
 	 * Echos a title above certain sections.
+	 *
 	 * @since  0.1.0
 	 */
 	public function section2_callback() {
