@@ -73,7 +73,7 @@ class RetweetBox extends AbstractMetaBox {
 	public function save_metabox( $post_id, $post, $update ) {
 
 		// verify we have a nonce passed and it's the nonce we expect.
-		if ( ! isset( $_POST['twsc-post-retweet-nonce'] ) || ! wp_verify_nonce( wp_unslash( $_POST['twsc-post-retweet-nonce'] ), basename( __FILE__ ) ) ) {
+		if ( ! isset( $_POST['twsc-post-retweet-nonce'] ) || ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['twsc-post-retweet-nonce'] ) ), basename( __FILE__ ) ) ) {
 			return $post_id;
 		}
 		// Users must have the 'edit_post' permission to update the meta for it.
