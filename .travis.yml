@@ -1,3 +1,6 @@
+# Use new container based environment
+sudo: false
+
 language: php
 
 notifications:
@@ -10,22 +13,48 @@ branches:
     - master
     - develop
 
-php:
-  - 5.6
-  - 7.0
-  - 7.1
-  - 7.2
+cache:
+  apt: true
+  directories:
+    - node_modules
+    - vendor
+    - $HOME/.composer/cache
 
-env:
-  - WP_VERSION=latest WP_MULTISITE=0
-  - WP_VERSION=3.7 WP_MULTISITE=0
-  - WP_VERSION=4.9-beta4-42026 WP_MULTISITE=0
+matrix:
+    fast_finish: true
+
+    include:
+        # aliased to a recent 7.0 version
+        - php: '7.0'
+        # aliased to a recent 7.1 version
+        - php: '7.1'
+          env: SNIFF=1
+        # aliased to a recent 7.2 version
+        - php: '7.2'
+        # php nightly
+        - php: 'nightly'
+
+    allow_failures:
+        - php: nightly
+
+install:
+  - composer install
+  - composer dump-autoload -o
 
 before_script:
+  - bash bin/install-wp-tests.sh wordpress_test root '' localhost $WP_VERSION
   - export PATH="$HOME/.composer/vendor/bin:$PATH"
   - |
-    composer global require wp-coding-standards/wpcs
-    phpcs --config-set installed_paths $HOME/.composer/vendor/wp-coding-standards/wpcs
+    if [[ ${TRAVIS_PHP_VERSION:0:3} == "7.0" ]]; then
+      composer global require "phpunit/phpunit=5.6.*"
+    else
+      composer global require "phpunit/phpunit=4.8.*"
+    fi
+  - |
+    if [[ "$SNIFF" == "1" ]]; then composer global require wp-coding-standards/wpcs
+    phpcs --config-set installed_paths $HOME/.composer/vendor/wp-coding-standards/wpcs; fi
 
 script:
-  - phpcs --standard=phpcs.ruleset.xml $(find . -name '*.php') --runtime-set ignore_warnings_on_exit 1
+  # runs phpcs with the rules from the project, allow warnings not to cause fail.
+  - if [[ "$SNIFF" == "1" ]]; then phpcs --standard=phpcs.ruleset.xml $(find . -name '*.php') --runtime-set ignore_warnings_on_exit 1; fi
+  - phpunit
