@@ -96,7 +96,7 @@ class TweetBox extends AbstractMetaBox {
 	public function save_metabox( $post_id, $post, $update ) {
 
 		// verify we have a nonce passed and it's the nonce we expect.
-		if ( ! isset( $_POST['twsc-post-nonce'] ) || ! wp_verify_nonce( $_POST['twsc-post-nonce'], basename( __FILE__ ) ) ) {
+		if ( ! isset( $_POST['twsc-post-nonce'] ) || ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['twsc-post-nonce'] ) ), basename( __FILE__ ) ) ) {
 			return $post_id;
 		}
 		// Users must have the 'edit_post' permission to update the meta for it.
@@ -136,20 +136,20 @@ class TweetBox extends AbstractMetaBox {
 		$tweet_obj->content = $post->post_content;
 		// datepicker info.
 		if ( isset( $_POST['twsc_datepicker'] ) ) {
-			$datepicker = $_POST['twsc_datepicker'];
+			$datepicker = sanitize_text_field( wp_unslash( $_POST['twsc_datepicker'] ) );
 		}
 		update_post_meta( $post_id, '_twsc_datepicker', $datepicker );
 
 		// timepicker value.
 		if ( isset( $_POST['twsc_timepicker'] ) ) {
-			$timepicker = $_POST['twsc_timepicker'];
+			$timepicker = sanitize_text_field( wp_unslash( $_POST['twsc_timepicker'] ) );
 		}
 		update_post_meta( $post_id, '_twsc_timepicker', $timepicker );
 
 		// if we have both a time and date then use it to make a timestamp - this
 		// is used later for easier time checking.
-		if ( ( isset( $_POST['twsc_datepicker'] ) && '' !== $_POST['twsc_datepicker'] ) && ( isset( $_POST['twsc_timepicker'] ) && '' !== $_POST['twsc_timepicker'] ) ) {
-			$timestamptosend = strtotime( $_POST['twsc_datepicker'] . ' ' . $_POST['twsc_timepicker'] );
+		if ( ( isset( $_POST['twsc_datepicker'] ) && '' !== sanitize_text_field( wp_unslash( $_POST['twsc_datepicker'] ) ) ) && ( isset( $_POST['twsc_timepicker'] ) && '' !== sanitize_text_field( wp_unslash( $_POST['twsc_timepicker'] ) ) ) ) {
+			$timestamptosend = strtotime( sanitize_text_field( wp_unslash( $_POST['twsc_datepicker'] ) ) . ' ' . sanitize_text_field( wp_unslash( $_POST['twsc_timepicker'] ) ) );
 			update_post_meta( $post_id, '_twsc_timetosend', $timestamptosend );
 			$tweet_obj->scheduled_time = $timestamptosend;
 		}

@@ -165,10 +165,9 @@ abstract class AbstractAdminSubpage {
 	 * Function capable of generating a tab based navigation for use on the
 	 * plugins settings pages.
 	 *
-	 *
 	 * @since  0.1.0
 	 * @method options_tabs
-	 * 
+	 *
 	 * @param  string $active_tab currently active tab (a settings page id).
 	 */
 	public function options_tabs( $active_tab = '' ) {
