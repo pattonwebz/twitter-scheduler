@@ -136,8 +136,8 @@ class TweetsListMods {
 		global $post;
 		if ( 'edit.php' === $hook ) {
 			if ( is_object( $post ) && TWSC_POST_TYPE === $post->post_type ) {
-				wp_enqueue_style( 'twsc-admin', TWSC_PLUGIN_URL . 'inc/admin/css/tables.css' );
-				wp_enqueue_script( 'twsc-copy', TWSC_PLUGIN_URL . 'inc/admin/js/copypost.js' );
+				wp_enqueue_style( 'twsc-admin', TWSC_PLUGIN_URL . 'assets/css/tables.css' );
+				wp_enqueue_script( 'twsc-copy', TWSC_PLUGIN_URL . 'assets/js/copypost.js' );
 				wp_localize_script( 'twsc-copy', 'twsc_copy',
 					array(
 						'ajax_url' => admin_url( 'admin-ajax.php' ),

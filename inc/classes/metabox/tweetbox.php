@@ -163,10 +163,10 @@ class TweetBox extends AbstractMetaBox {
 			return;
 		}
 		if ( TWSC_POST_TYPE === $post->post_type ) {
-			wp_register_script( 'twitter-text', TWSC_PLUGIN_URL . 'inc/admin/js/twitter-text/twitter-text.min.js', array( 'jquery' ), '2.0.0' );
+			wp_register_script( 'twitter-text', TWSC_PLUGIN_URL . 'assets/js/twitter-text/twitter-text.min.js', array( 'jquery' ), '2.0.0' );
 
 			// enqueue the editor script we have functions inside.
-			wp_enqueue_script( 'twsc-admin', TWSC_PLUGIN_URL . 'inc/admin/js/editor.js', array( 'twitter-text' ) );
+			wp_enqueue_script( 'twsc-admin', TWSC_PLUGIN_URL . 'assets/js/editor.js', array( 'twitter-text' ) );
 			// make a new query for getting the scheduled item farthest in the future.
 			$newquery = new \WP_Query( Helpers\farthest_scheuled_posting_query_args() );
 
