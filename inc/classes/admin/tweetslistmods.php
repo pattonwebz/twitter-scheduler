@@ -153,6 +153,7 @@ class TweetsListMods {
 				wp_localize_script( 'twsc-copy', 'twsc_copy',
 					array(
 						'ajax_url' => admin_url( 'admin-ajax.php' ),
+						'site_url' => get_site_url(),
 					)
 				);
 			}
