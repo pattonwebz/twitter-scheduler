@@ -24,7 +24,7 @@ function twscCopyPost( e ) {
 		},
 		function(response) {
 			console.log( 'The server responded: ', response );
-			window.location.href = twsc_copy.site_root_url + '/wp-admin/post.php?post=' + response + '&action=edit'
+			window.location.href = twsc_copy.site_url + '/wp-admin/post.php?post=' + response + '&action=edit'
 		}
 	);
 }
