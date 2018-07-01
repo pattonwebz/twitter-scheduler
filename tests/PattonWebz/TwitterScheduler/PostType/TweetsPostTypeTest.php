@@ -18,12 +18,12 @@ class TweetsPostTypeTest extends \WP_UnitTestCase {
 	}
 
 	function test_it_doesnt_supports_comments() {
-		$actual = $this->post_type->get_editor_support();
+		$actual = $this->post_type->get_args()['supports'];
 		$this->assertNotContains( 'comments', $actual );
 	}
 
 	function test_it_is_not_public() {
-		$actual = $this->post_type->get_options()['public'];
+		$actual = $this->post_type->get_args()['public'];
 		$this->assertNotTrue( $actual );
 	}
 
