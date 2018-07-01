@@ -30,11 +30,6 @@ matrix:
     allow_failures:
         - php: nightly
 
-env:
-  - WP_VERSION=4.9 WP_MULTISITE=0
-  - WP_VERSION=4.9 WP_MULTISITE=1
-  - WP_VERSION=latest WP_MULTISITE=0
-
 install:
   - composer install
   - composer dump-autoload -o
