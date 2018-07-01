@@ -14,7 +14,7 @@
  * @since           0.1.0
  * @author          William Patton <will@pattonwebz.com>
  * @copyright       Copyright (c) 2018, William Patton
- * @link            https://github.com/pattonwebz/customizer-framework/
+ * @link            https://github.com/pattonwebz/twitter-scheduler/
  * @license         http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 

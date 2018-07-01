@@ -16,11 +16,15 @@ use PattonWebz\TwitterSchedler\Tweet;
 
 /**
  * Abstract class to make creating metaboxes easier.
+ *
+ * @since  0.1.0
  */
 abstract class AbstractMetaBox {
 
 	/**
 	 * A string ID to use for the metabox.
+	 *
+	 * @since  0.1.0
 	 *
 	 * @var string|null
 	 */
@@ -29,12 +33,16 @@ abstract class AbstractMetaBox {
 	/**
 	 * A text string to hold the title.
 	 *
+	 * @since  0.1.0
+	 *
 	 * @var string|null
 	 */
 	public $title = null;
 
 	/**
 	 * Array of the supported screen string where the metabox should appear.
+	 *
+	 * @since  0.1.0
 	 *
 	 * @var array
 	 */
@@ -45,6 +53,7 @@ abstract class AbstractMetaBox {
 	/**
 	 * Adds the actions to place metabox in it's screen and hooks in the save action.
 	 *
+	 * @since  0.1.0
 	 * @method register
 	 */
 	public function register() {
@@ -54,6 +63,9 @@ abstract class AbstractMetaBox {
 
 	/**
 	 * Adds a meta box in the editor for social schedule settings.
+	 *
+	 * @since  0.1.0
+	 * @method add_metabox
 	 */
 	public function add_metabox() {
 		add_meta_box( $this->id, $this->title, [ $this, 'render' ], $this->supported_screens, 'side', 'high', null );
@@ -61,6 +73,8 @@ abstract class AbstractMetaBox {
 
 	/**
 	 * Outputs a block of markup containing a nonce and form inputs.
+	 *
+	 * @since  0.1.0
 	 *
 	 * @param  object $object contains an object with some post info.
 	 */
@@ -70,6 +84,8 @@ abstract class AbstractMetaBox {
 	 * Saves the data passed to the custom metabox.
 	 *
 	 * Returns just the $post_id on failure.
+	 *
+	 * @since  0.1.0
 	 *
 	 * @param  string $post_id id of the post.
 	 * @param  object $post    original post object.

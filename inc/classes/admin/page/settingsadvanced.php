@@ -17,11 +17,15 @@ use PattonWebz\TwitterScheduler\Admin\AbstractAdminSubpage;
  * Creates a settings input page for the plugin.
  *
  * Used to hold the advanced settings or options the plugin uses.
+ *
+ * @since  0.1.0
  */
 class SettingsAdvanced extends AbstractAdminSubpage {
 
 	/**
 	 * The ID used to identify this page and it's assosiated settings.
+	 *
+	 * @since  0.1.0
 	 *
 	 * @var string|null
 	 */
@@ -29,6 +33,8 @@ class SettingsAdvanced extends AbstractAdminSubpage {
 
 	/**
 	 * When constructing this object set the title.
+	 *
+	 * @since  0.1.0
 	 */
 	public function __construct() {
 		$this->title = esc_html__( 'Advanced Settings', 'twitter-scheduler' );
@@ -37,6 +43,7 @@ class SettingsAdvanced extends AbstractAdminSubpage {
 	/**
 	 * Register our settings and add our sections and setting fields.
 	 *
+	 * @since  0.1.0
 	 * @method settings_init
 	 */
 	public function settings_init() {
@@ -107,6 +114,9 @@ class SettingsAdvanced extends AbstractAdminSubpage {
 
 	/**
 	 * Echos a title above certain sections.
+	 *
+	 * @since  0.1.0
+	 * @method section_callback
 	 */
 	public function section_callback() {
 		?>
@@ -119,6 +129,7 @@ class SettingsAdvanced extends AbstractAdminSubpage {
 	 *
 	 * Renders an input box to hold a settings value.
 	 *
+	 * @since  0.1.0
 	 * @return void
 	 */
 	public function prefered_time_min_render() {
@@ -135,6 +146,7 @@ class SettingsAdvanced extends AbstractAdminSubpage {
 	 *
 	 * Renders an input box to hold a settings value.
 	 *
+	 * @since  0.1.0
 	 * @return void
 	 */
 	public function prefered_time_max_render() {
@@ -151,6 +163,7 @@ class SettingsAdvanced extends AbstractAdminSubpage {
 	 *
 	 * Renders an input box to hold a settings value.
 	 *
+	 * @since  0.1.0
 	 * @return void
 	 */
 	public function prefered_weekdays_render() {
@@ -175,6 +188,7 @@ class SettingsAdvanced extends AbstractAdminSubpage {
 	 *
 	 * Renders an input box to hold a settings value.
 	 *
+	 * @since  0.1.0
 	 * @return void
 	 */
 	public function times_per_weekday_render() {
@@ -191,6 +205,7 @@ class SettingsAdvanced extends AbstractAdminSubpage {
 	 *
 	 * Renders an input box to hold a settings value.
 	 *
+	 * @since  0.1.0
 	 * @return void
 	 */
 	public function times_per_weekend_render() {

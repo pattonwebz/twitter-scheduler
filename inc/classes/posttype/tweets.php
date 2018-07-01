@@ -13,11 +13,16 @@ namespace PattonWebz\TwitterScheduler\PostType;
 
 /**
  * Creates a `TWSC_POST_TYPE` post type to use for input and storing Tweets.
+ *
+ * @since  0.1.0
  */
 class Tweets {
 
 	/**
 	 * Hook in and register the post type.
+	 *
+	 * @method register
+	 * @since  0.1.0
 	 */
 	public function register() {
 		add_action( 'init', [ $this, 'register_cpt' ], 0 );
@@ -26,6 +31,8 @@ class Tweets {
 	 * Get the name of this post type.
 	 *
 	 * @method get_name
+	 * @since  0.1.0
+	 *
 	 * @return string
 	 */
 	public function get_name() {
@@ -36,6 +43,8 @@ class Tweets {
 	 * Get the labels used with this post type.
 	 *
 	 * @method get_labels
+	 * @since  0.1.0
+	 *
 	 * @return array
 	 */
 	public function get_labels() {
@@ -74,6 +83,8 @@ class Tweets {
 	 * Get the post ype registration args.
 	 *
 	 * @method get_args
+	 * @since  0.1.0
+	 *
 	 * @return array
 	 */
 	public function get_args() {
@@ -100,6 +111,8 @@ class Tweets {
 	}
 	/**
 	 * Register the CPT used to hold posts.
+	 *
+	 * @since  0.1.0
 	 */
 	public function register_cpt() {
 		register_post_type( $this->get_name(), $this->get_args() );

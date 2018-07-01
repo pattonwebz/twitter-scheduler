@@ -17,11 +17,15 @@ use PattonWebz\TwitterScheduler\Tweet;
 /**
  * Adds and reorders some colums on our tweets post list page as well as setting
  * which can be sorted by, adds a new 'Duplicate' link to posts actions row.
+ *
+ * @since  0.1.0
  */
 class TweetsListMods {
 
 	/**
 	 * The public callable setup method for hooking in this classes functions.
+	 *
+	 * @since  0.1.0
 	 *
 	 * @method setup
 	 */
@@ -36,6 +40,8 @@ class TweetsListMods {
 
 	/**
 	 * Add some cols to the admin table for our CPT and remove uneeded ones.
+	 *
+	 * @since  0.1.0
 	 *
 	 * @param array $cols all the currently set cols for this admin table.
 	 */
@@ -57,7 +63,9 @@ class TweetsListMods {
 	/**
 	 * Array of adming page list cols we want to be able to sort by.
 	 *
+	 * @since  0.1.0
 	 * @method sortable_cols
+	 *
 	 * @param  array $cols list of current cols.
 	 * @return array       list of cols we want to sort with.
 	 */
@@ -70,6 +78,8 @@ class TweetsListMods {
 
 	/**
 	 * Add the content of each col for each entry in the list.
+	 *
+	 * @since  0.1.0
 	 *
 	 * @param string  $column_name the column name we're on.
 	 * @param integer $post_id     the id of the current post.
@@ -130,6 +140,8 @@ class TweetsListMods {
 	/**
 	 * Adds any stylesheets or scripts to the social posts admin table.
 	 *
+	 * @since  0.1.0
+	 *
 	 * @param string $hook the hook we're on to test for.
 	 */
 	public function add_admin_scripts( $hook ) {
@@ -152,6 +164,7 @@ class TweetsListMods {
 	 * action that will allow recheduling of posts that have already sent or
 	 * are still scheduled.
 	 *
+	 * @since  0.1.0
 	 * @method add_copy_row_action
 	 * @param  array  $actions list of current post action row links.
 	 * @param  object $post    a post object.
@@ -183,10 +196,14 @@ class TweetsListMods {
 	/**
 	 * Acepts the ajax requires for dupicating entries.
 	 *
+	 * TODO: Add nonce check.
+	 *
+	 * @since  0.1.0
 	 * @method ajax_copy_tweet
+	 *
 	 * @return void|int
 	 */
-	function ajax_copy_tweet() {
+	public function ajax_copy_tweet() {
 
 		if ( ! isset( $_POST['postID'] ) ) {
 			return;

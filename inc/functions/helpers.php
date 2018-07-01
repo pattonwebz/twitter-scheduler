@@ -19,6 +19,8 @@ use PattonWebz\TwitterScheduler\TwitterInteractions;
 /**
  * Function to retrieve all of the the auth settings needed from the database for twitter.
  *
+ * @since  0.1.0
+ *
  * @return array the auth settings needed for twitter.
  */
 function get_twitter_settings() {
@@ -36,6 +38,8 @@ function get_twitter_settings() {
  * Check that the tweet seems valid.
  *
  * This includes checking total character count and amking sure links fit.
+ *
+ * @since  0.1.0
  *
  * @param  string $content string that will become the tweet content.
  * @return boolean          returns true if tweet seems valid, false otherwise.
@@ -76,6 +80,8 @@ function is_tweet_valid( $content ) {
  * Checks the current limit on t.co links length.
  *
  * Should be run daily and cached.
+ *
+ * @since  0.1.0
  */
 function check_tco_short_url_limit() {
 
@@ -112,6 +118,8 @@ function check_tco_short_url_limit() {
  *
  * NOTE: This only works with single id, but API can accept potentially 4 for images.
  *
+ * @since  0.1.0
+ *
  * @param  integer $post_id the post ID which we are workign with.
  * @return integer          the media id which we are attaching.
  */
@@ -131,6 +139,8 @@ function get_valid_media_ids( $post_id ) {
 /**
  * Retuns an array of args used to get the next scheduled post for social share.
  * Filters the array before return.
+ *
+ * @since  0.1.0
  *
  * @param  array $args array of args to override defaults to be returned.
  * @return array       array of maybe updated args.
@@ -181,6 +191,8 @@ function next_scheduled_posting_query_args( $args = array() ) {
  * Retuns an array of args used to get the next scheduled post for social share.
  * Filters the array before return.
  *
+ * @since  0.1.0
+ *
  * @param  array $args array of args to override defaults to be returned.
  * @return array       array of maybe updated args.
  */
@@ -215,6 +227,8 @@ function farthest_scheuled_posting_query_args( $args = array() ) {
 
 /**
  * Determine an optimal set of schedule times based on the options set.
+ *
+ * @since  0.1.0
  *
  * @method determine_schedule
  */

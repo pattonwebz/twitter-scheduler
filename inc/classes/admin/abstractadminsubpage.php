@@ -13,11 +13,15 @@ namespace PattonWebz\TwitterScheduler\Admin;
 
 /**
  * An abstract class that should be used to create admin subpages in a plugin.
+ *
+ * @since  0.1.0
  */
 abstract class AbstractAdminSubpage {
 
 	/**
 	 * The ID used to identify this page and it's assosiated settings.
+	 *
+	 * @since  0.1.0
 	 *
 	 * @var string|null
 	 */
@@ -28,6 +32,7 @@ abstract class AbstractAdminSubpage {
 	 *
 	 * This is used as this ID of this page when registering.
 	 *
+	 * @since  0.1.0
 	 * @method get_id
 	 * @return string|null
 	 */
@@ -37,6 +42,8 @@ abstract class AbstractAdminSubpage {
 
 	/**
 	 * The parent pages id (since this is to create subpages).
+	 *
+	 * @since  0.1.0
 	 *
 	 * @var string
 	 */
@@ -48,7 +55,9 @@ abstract class AbstractAdminSubpage {
 	 * This is used as a master page ID to register other subpages to. The page
 	 * that is being used as parent needs registered before any child pages.
 	 *
+	 * @since  0.1.0
 	 * @method get_parent_id
+	 *
 	 * @return string|null
 	 */
 	public function get_parent_id() {
@@ -61,6 +70,8 @@ abstract class AbstractAdminSubpage {
 	 * A string title to use for the page, this should be passed in via a i18n
 	 * compatible function when being set.
 	 *
+	 * @since  0.1.0
+	 *
 	 * @var string|null
 	 */
 	public $title = null;
@@ -68,7 +79,9 @@ abstract class AbstractAdminSubpage {
 	/**
 	 * Returns the title the class holds.
 	 *
+	 * @since  0.1.0
 	 * @method get_title
+	 *
 	 * @return string|null
 	 */
 	public function get_title() {
@@ -78,6 +91,7 @@ abstract class AbstractAdminSubpage {
 	 * The is the public callable method that hooks in all our actions to make
 	 * this page registered in the admin area.
 	 *
+	 * @since  0.1.0
 	 * @method register
 	 */
 	public function register() {
@@ -89,6 +103,7 @@ abstract class AbstractAdminSubpage {
 	/**
 	 * Adds this settings page to the admin as a subpage of the paent_id.
 	 *
+	 * @since  0.1.0
 	 * @method add_admin_menu
 	 */
 	public function add_admin_menu() {
@@ -99,6 +114,7 @@ abstract class AbstractAdminSubpage {
 	 * Setup the settings and register them to a section matching this page
 	 * id in this method when extending.
 	 *
+	 * @since  0.1.0
 	 * @method settings_init
 	 */
 	abstract public function settings_init();
@@ -107,6 +123,7 @@ abstract class AbstractAdminSubpage {
 	 * Renders the page option, includes a title, tab navigation and the group
 	 * of settings for this page id.
 	 *
+	 * @since  0.1.0
 	 * @method render
 	 */
 	public function render() {
@@ -134,7 +151,9 @@ abstract class AbstractAdminSubpage {
 	 * This is a filter function to add this page id to the array of all pages
 	 * used when building out the navigation.
 	 *
+	 * @since  0.1.0
 	 * @method add_tab
+	 *
 	 * @param  array $tabs a maybe updated array of settings page ids.
 	 */
 	public function add_tab( $tabs ) {
@@ -146,7 +165,10 @@ abstract class AbstractAdminSubpage {
 	 * Function capable of generating a tab based navigation for use on the
 	 * plugins settings pages.
 	 *
+	 *
+	 * @since  0.1.0
 	 * @method options_tabs
+	 * 
 	 * @param  string $active_tab currently active tab (a settings page id).
 	 */
 	public function options_tabs( $active_tab = '' ) {

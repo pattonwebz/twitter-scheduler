@@ -19,6 +19,8 @@ use PattonWebz\TwitterScheduler\Admin\Page;
 
 /**
  * Display a notice on sections of admin is there is no API key set.
+ *
+ * @since  0.1.0
  */
 function display_notice() {
 	global $hook_suffix;
@@ -58,6 +60,8 @@ add_action( 'admin_notices', __NAMESPACE__ . '\\display_notice' );
  * Handle all the base setup work needed for the plugin to work. This is the
  * earlierst action we're hooking into so all setup work is best placed here.
  *
+ * @since  0.1.0
+ *
  * @method setup
  */
 function setup() {
@@ -73,6 +77,8 @@ add_action( 'plugins_loaded', __NAMESPACE__ . '\\setup' );
 /**
  * Adds the plugins post types.
  *
+ * @since  0.1.0
+ *
  * @method add_post_types
  */
 function add_post_types() {
@@ -85,6 +91,8 @@ function add_post_types() {
 /**
  * Adds the plugins meta boxes.
  *
+ * @since  0.1.0
+ *
  * @method add_meta_boxes
  */
 function add_meta_boxes() {
@@ -96,6 +104,8 @@ function add_meta_boxes() {
 
 /**
  * Adds the plugins admin pages.
+ *
+ * @since  0.1.0
  *
  * @method add_admin_pages
  */
@@ -112,9 +122,14 @@ function add_admin_pages() {
 }
 
 /**
- * The main runner function for the plugin.
+ * The main runner function for the plugin, it's the function that is triggered
+ * on cron.
  *
- * It decides if we have a post to send, if it's valid and then pushes it out.
+ * The runner decides if we have a post to send, if it's valid and if so pushes
+ * it out to twitter then stores the response for later reference.
+ *
+ * @since  0.1.0
+ * @method runner
  */
 function runner() {
 

@@ -19,11 +19,15 @@ use PattonWebz\TwitterScheduler\Admin\AbstractAdminSubpage;
  *
  * Shows the settings that are retrieved from DB along with the list of upcoming
  * posts that should be scheduled.
+ *
+ * @since  0.1.0
  */
 class Debug extends AbstractAdminSubpage {
 
 	/**
 	 * The ID used to identify this page and it's assosiated settings.
+	 *
+	 * @since  0.1.0
 	 *
 	 * @var string|null
 	 */
@@ -31,6 +35,8 @@ class Debug extends AbstractAdminSubpage {
 
 	/**
 	 * When constructing this object set the title.
+	 *
+	 * @since  0.1.0
 	 */
 	public function __construct() {
 		$this->title = esc_html__( 'Debug', 'twitter-scheduler' );
@@ -42,8 +48,10 @@ class Debug extends AbstractAdminSubpage {
 	 * Because the debug page is only output it doesn't have any settings,
 	 * return null to bypass the usual init step.
 	 *
+	 * @since  0.1.0
+	 *
 	 * @method settings_init
-	 * @return [type]
+	 * @return null
 	 */
 	public function settings_init() {
 		// do nothing here.
@@ -53,6 +61,8 @@ class Debug extends AbstractAdminSubpage {
 	/**
 	 * Renders the debug page. Shows the currently saved options as well as a
 	 * list of upcoming/recent scheduled posts.
+	 *
+	 * @since  0.1.0
 	 */
 	public function render() {
 		?>

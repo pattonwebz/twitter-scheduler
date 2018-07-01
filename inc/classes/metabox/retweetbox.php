@@ -16,11 +16,15 @@ use PattonWebz\TwitterSchedler\Tweet;
 
 /**
  * Adds a metabox to capture retweet id and handles the saving of it's data.
+ *
+ * @since  0.1.0
  */
 class RetweetBox extends AbstractMetaBox {
 
 	/**
 	 * The id of this meta box.
+	 *
+	 * @since  0.1.0
 	 *
 	 * @var string
 	 */
@@ -29,6 +33,7 @@ class RetweetBox extends AbstractMetaBox {
 	/**
 	 * Setup the meta boxes title.
 	 *
+	 * @since  0.1.0
 	 * @method __construct
 	 */
 	public function __construct() {
@@ -37,6 +42,8 @@ class RetweetBox extends AbstractMetaBox {
 
 	/**
 	 * Outputs a block of markup containing a nonce and form inputs.
+	 *
+	 * @since  0.1.0
 	 *
 	 * @param  object $object contains and object with some post info.
 	 */
@@ -55,6 +62,8 @@ class RetweetBox extends AbstractMetaBox {
 	 * Saves the data passed to the custom metabox.
 	 *
 	 * Returns just the $post_id on failure.
+	 *
+	 * @since  0.1.0
 	 *
 	 * @param  string $post_id id of the post.
 	 * @param  object $post    original post object.

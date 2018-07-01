@@ -17,6 +17,8 @@ use PattonWebz\TwitterSchedler\Tweet;
 
 /**
  * Holder for any functions that interact with twitter API.
+ *
+ * @since  0.1.0
  */
 class TwitterInteractions {
 
@@ -30,6 +32,8 @@ class TwitterInteractions {
 	/**
 	 * Updates the stored value for the latest max tco shortened url length along
 	 * with a timestamp so we can recheck every 24 hours.
+	 *
+	 * @since  0.1.0
 	 */
 	public static function update_tco_short_url_limit() {
 
@@ -64,6 +68,8 @@ class TwitterInteractions {
 	/**
 	 * Function to attach media to tweets - by uploading it to Twitter first
 	 * and storing the media id that they return.
+	 *
+	 * @since  0.1.0
 	 *
 	 * @param  integer $post_id the post ID which we'll be saving data to.
 	 * @return string|void      the attached media id for storage.
@@ -124,6 +130,8 @@ class TwitterInteractions {
 	/**
 	 * Sends a retweet based on a tweet id that is passed.
 	 *
+	 * @since  0.1.0
+	 *
 	 * @param integer $post_id    the id of post we'll update meta for.
 	 * @param integer $retweet_id the ido of the tweet we're retweeting.
 	 *
@@ -168,6 +176,8 @@ class TwitterInteractions {
 	 * Function to send a tweet.
 	 *
 	 * This function optionally attaches images as needed.
+	 *
+	 * @since  0.1.0
 	 *
 	 * @param  integer $post_id       the post ID that we're working from.
 	 * @param  string  $tweet_content the contents of the tweet, already validated.

@@ -17,11 +17,15 @@ use \PattonWebz\TwitterScheduler\Tweet;
 
 /**
  * An class to create the main tweet box metabox.
+ *
+ * @since  0.1.0
  */
 class TweetBox extends AbstractMetaBox {
 
 	/**
 	 * A string ID to use for the metabox.
+	 *
+	 * @since  0.1.0
 	 *
 	 * @var string|null
 	 */
@@ -31,6 +35,7 @@ class TweetBox extends AbstractMetaBox {
 	 * Setup the meta boxes title.
 	 *
 	 * @method __construct
+	 * @since  0.1.0
 	 */
 	public function __construct() {
 		$this->title = esc_html__( 'Twitter Scheduler', 'twitter-scheduler' );
@@ -40,6 +45,7 @@ class TweetBox extends AbstractMetaBox {
 	 * Adds the actions to place metabox in it's screen and hooks in the save action.
 	 *
 	 * @method register
+	 * @since  0.1.0
 	 */
 	public function register() {
 		parent::register();
@@ -48,6 +54,8 @@ class TweetBox extends AbstractMetaBox {
 
 	/**
 	 * Outputs a block of markup containing a nonce and form inputs.
+	 *
+	 * @since  0.1.0
 	 *
 	 * @param  object $object contains and object with some post info.
 	 */
@@ -77,6 +85,8 @@ class TweetBox extends AbstractMetaBox {
 	 * Saves the data passed to the custom metabox.
 	 *
 	 * Returns just the $post_id on failure.
+	 *
+	 * @since  0.1.0
 	 *
 	 * @param  string $post_id id of the post.
 	 * @param  object $post    original post object.
@@ -152,6 +162,8 @@ class TweetBox extends AbstractMetaBox {
 
 	/**
 	 * Adds some functions for use within our editor space.
+	 *
+	 * @since  0.1.0
 	 *
 	 * @param  string $hook a string that contains the hook that is firing.
 	 * @return void

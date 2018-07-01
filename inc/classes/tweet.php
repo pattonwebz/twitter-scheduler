@@ -13,6 +13,8 @@ namespace PattonWebz\TwitterScheduler;
 
 /**
  * Class used as a holder object to store all the Tweet data.
+ *
+ * @since  0.1.0
  */
 class Tweet {
 
@@ -20,12 +22,16 @@ class Tweet {
 	 * If this tweet object holds a tweet that has been sent already then this
 	 * is where the ID of that tweet will be found as a string. NULL otherwise.
 	 *
+	 * @since  0.1.0
+	 *
 	 * @var null|string
 	 */
 	public $id = null;
 
 	/**
 	 * The type of tweet to send. Default is 'tweet' but may also be 'retweet'.
+	 *
+	 * @since  0.1.0
 	 *
 	 * @var string
 	 */
@@ -35,12 +41,18 @@ class Tweet {
 	 * Hold the current status of this tweet. It could be used to hold a string
 	 * like 'scheduled', 'sent', 'failed' etc.
 	 *
+	 * @since  0.1.0
+	 *
 	 * @var null|string
 	 */
 	public $status = null;
 
 	/**
 	 * Text content that is to be sent as the actual tweet content.
+	 *
+	 * @since  0.1.0
+	 *
+	 * @since  0.1.0
 	 *
 	 * @var string
 	 */
@@ -49,6 +61,8 @@ class Tweet {
 	/**
 	 * A string to hold an ID of a retweet this object will represent.
 	 *
+	 * @since  0.1.0
+	 *
 	 * @var string
 	 */
 	public $retweet_id = '';
@@ -56,12 +70,16 @@ class Tweet {
 	/**
 	 * Should hold a unix timestamp for when the tweet is scheduled to send.
 	 *
+	 * @since  0.1.0
+	 *
 	 * @var string
 	 */
 	public $scheduled_time = '';
 
 	/**
 	 * Property to hold the timestamp of when this object was created.
+	 *
+	 * @since  0.1.0
 	 *
 	 * @var string
 	 */
@@ -71,6 +89,7 @@ class Tweet {
 	 * At creation time store the current servertime in the object.
 	 *
 	 * @method __construct
+	 * @since  0.1.0
 	 */
 	public function __construct() {
 		$this->creation_time = get_the_time( 'U' );

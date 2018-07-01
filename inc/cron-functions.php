@@ -14,6 +14,7 @@ namespace PattonWebz\TwitterScheduler\Cron;
 /**
  * Addd a 5 minute cron slot to schedule things on.
  *
+ * @since  0.1.0
  * @param  array $schedules array of current cron schedules.
  * @return array            updated array of cron schedules.
  */
@@ -32,6 +33,8 @@ add_filter( 'cron_schedules', __NAMESPACE__ . '\\cron_schedules' ); // PHPCS:Cro
  * On activation of our plugin we will set a cron task to run every 5 minutes.
  *
  * First runtime will be a random time between 30s from now and 5 min from now.
+ *
+ * @since  0.1.0
  */
 function activation() {
 	if ( ! wp_next_scheduled( 'sosc_schedule_hooks' ) ) {
@@ -46,6 +49,8 @@ function activation() {
  *
  * This could also be used to cleanup our post_types and settings data - but it
  * currently does not cleanup work yet.
+ *
+ * @since  0.1.0
  */
 function deactivation() {
 	wp_clear_scheduled_hook( 'sosc_schedule_hooks' );

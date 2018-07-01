@@ -15,11 +15,15 @@ use PattonWebz\TwitterScheduler\Admin\AbstractAdminSubpage;
 
 /**
  * The main settings page for the Twitter Scheduler Plugin. Gets the auth keys.
+ *
+ * @since  0.1.0
  */
 class Settings extends AbstractAdminSubpage {
 
 	/**
 	 * The ID used to identify this page and it's assosiated settings.
+	 *
+	 * @since  0.1.0
 	 *
 	 * @var string|null
 	 */
@@ -27,6 +31,9 @@ class Settings extends AbstractAdminSubpage {
 
 	/**
 	 * When constructing this object set the title.
+	 *
+	 * @since  0.1.0
+	 * @method __construct
 	 */
 	public function __construct() {
 		$this->title = esc_html__( 'Social Scheduler', 'twitter-scheduler' );
@@ -36,6 +43,7 @@ class Settings extends AbstractAdminSubpage {
 	 * This is our primary settings page. It's the anchor all other pages are
 	 * hooked into.
 	 *
+	 * @since  0.1.0
 	 * @method add_admin_menu
 	 */
 	public function add_admin_menu() {
@@ -46,6 +54,7 @@ class Settings extends AbstractAdminSubpage {
 	/**
 	 * Register our settings and add our sections and setting fields.
 	 *
+	 * @since  0.1.0
 	 * @method settings_init
 	 */
 	public function settings_init() {
@@ -122,6 +131,7 @@ class Settings extends AbstractAdminSubpage {
 
 	/**
 	 * Echos a title above certain sections.
+	 * @since  0.1.0
 	 */
 	public function section_callback() {
 		?>
@@ -131,6 +141,7 @@ class Settings extends AbstractAdminSubpage {
 
 	/**
 	 * Echos a title above certain sections.
+	 * @since  0.1.0
 	 */
 	public function section2_callback() {
 		?>
@@ -143,6 +154,7 @@ class Settings extends AbstractAdminSubpage {
 	 *
 	 * Renders an input box to hold a settings value.
 	 *
+	 * @since  0.1.0
 	 * @return void
 	 */
 	public function oauth_access_token_render() {
@@ -159,6 +171,7 @@ class Settings extends AbstractAdminSubpage {
 	 *
 	 * Renders an input box to hold a settings value.
 	 *
+	 * @since  0.1.0
 	 * @return void
 	 */
 	public function oauth_access_token_secret_render() {
@@ -175,6 +188,7 @@ class Settings extends AbstractAdminSubpage {
 	 *
 	 * Renders an input box to hold a settings value.
 	 *
+	 * @since  0.1.0
 	 * @return void
 	 */
 	public function consumer_key_render() {
@@ -191,6 +205,7 @@ class Settings extends AbstractAdminSubpage {
 	 *
 	 * Renders an input box to hold a settings value.
 	 *
+	 * @since  0.1.0
 	 * @return void
 	 */
 	public function consumer_secret_render() {
@@ -207,6 +222,7 @@ class Settings extends AbstractAdminSubpage {
 	 *
 	 * Renders an input box to hold a settings value.
 	 *
+	 * @since  0.1.0
 	 * @return void
 	 */
 	public function username_render() {
