@@ -100,14 +100,14 @@ class Debug extends AbstractAdminSubpage {
 		?>
 <div class="sosc-admin-col sosc-admin-left">
 	<pre>
-<?php
-// I want to use print_r() here. This is output for a debug page.
-// phpcs:disable
+		<?php
+		// I want to use print_r() here. This is output for a debug page.
+		// phpcs:disable
 print_r( Helpers\get_twitter_settings() );
 print_r( get_option( 'sosc_config_short_url_length' ) );
 print_r( $posts );
-// phpcs:enable
-?>
+		// phpcs:enable
+		?>
 	</pre>
 </div>
 		<?php
