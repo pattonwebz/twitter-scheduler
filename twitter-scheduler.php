@@ -8,7 +8,7 @@
  * Licence:         GPLv2 or later
  * Text Domain:     twitter-scheduler
  * Domain Path:     /languages
- * Version:         0.1.0
+ * Version:         1.0.0
  *
  * @package         Twitter Scheduler
  * @since           0.1.0
@@ -25,7 +25,7 @@ if ( ! defined( 'TWSC_PLUGIN_URL' ) ) {
 	define( 'TWSC_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 }
 if ( ! defined( 'TWSC_PLUGIN_VERSION' ) ) {
-	define( 'TWSC_PLUGIN_VERSION', '0.1.0' );
+	define( 'TWSC_PLUGIN_VERSION', '1.0.0' );
 }
 if ( ! defined( 'TWSC_ADMIN_PAGE_ID' ) ) {
 	define( 'TWSC_ADMIN_PAGE_ID', 'twitter_scheduler' );
