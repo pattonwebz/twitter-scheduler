@@ -181,9 +181,10 @@ class TweetsListMods {
 				$actions = array_merge(
 					$actions, array(
 						'copy' => sprintf(
-							'<a class="twsc-copy-trigger" href="#" data-postid="%2$d">%1$s</a>',
+							'<a class="twsc-copy-trigger" href="#" data-postid="%2$d" data-nonce="%3$s">%1$s</a>',
 							esc_html__( 'Duplicate', 'twitter-scheduler' ),
-							$post->ID
+							$post->ID,
+							wp_create_nonce( 'twsc_duplicate_' . $post->ID )
 						),
 					)
 				);
@@ -196,8 +197,6 @@ class TweetsListMods {
 	/**
 	 * Acepts the ajax requires for dupicating entries.
 	 *
-	 * TODO: Add nonce check.
-	 *
 	 * @since  0.1.0
 	 * @method ajax_copy_tweet
 	 *
@@ -205,11 +204,13 @@ class TweetsListMods {
 	 */
 	public function ajax_copy_tweet() {
 
+		check_admin_referer( 'twsc_duplicate_' . $_POST['postID'] );
+
 		if ( ! isset( $_POST['postID'] ) ) {
 			return;
 		}
 
-		$post_id = $_POST['postID'];
+		$post_id = absint( wp_unslash( $_POST['postID'] ) );
 		// Make your response and echo it.
 		$title       = get_the_title( $post_id );
 		$oldpost     = get_post( $post_id );

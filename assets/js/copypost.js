@@ -15,8 +15,9 @@ function twscCopyPost( e ) {
 	jQuery.post(
 		ajaxurl,
 		{
-			'action': 'copy_tweet',
-			'postID': e.currentTarget.dataset.postid,
+			'action'  : 'copy_tweet',
+			'postID'  : e.currentTarget.dataset.postid,
+			'_wpnonce': e.currentTarget.dataset.nonce,
 		},
 		function(response) {
 			console.log('The server responded: ', response);
