@@ -1,0 +1,308 @@
+# Copyright (C) 2018 William Patton
+# This file is distributed under the same license as the Twitter Scheduler package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Twitter Scheduler 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/twitter-scheduler\n"
+"POT-Creation-Date: 2018-06-24 22:58:13+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2018-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: grunt-wp-i18n 0.5.4\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: United States\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-Bookmarks: \n"
+"X-Textdomain-Support: yes\n"
+
+#: inc/classes/admin/page/debug.php:36
+msgid "Debug"
+msgstr ""
+
+#: inc/classes/admin/page/settings.php:32
+msgid "Social Scheduler"
+msgstr ""
+
+#: inc/classes/admin/page/settings.php:56
+msgid "Options and Settings."
+msgstr ""
+
+#: inc/classes/admin/page/settings.php:63
+msgid "OAuth Access Token"
+msgstr ""
+
+#: inc/classes/admin/page/settings.php:74
+msgid "OAuth Access Token Secret"
+msgstr ""
+
+#: inc/classes/admin/page/settings.php:85
+msgid "Consumer Key"
+msgstr ""
+
+#: inc/classes/admin/page/settings.php:96
+msgid "Consumer Secret"
+msgstr ""
+
+#: inc/classes/admin/page/settings.php:107
+msgid "Extra Options (not required)."
+msgstr ""
+
+#: inc/classes/admin/page/settings.php:113
+msgid "Twitter Username (reserved for future possible use)"
+msgstr ""
+
+#: inc/classes/admin/page/settings.php:128
+msgid ""
+"Enter your Twitter App credentials. You will need OAuth Access Tokens and "
+"Consumer Keys. Find out more about that here: "
+msgstr ""
+
+#: inc/classes/admin/page/settings.php:137
+msgid "These options may or may not be of value."
+msgstr ""
+
+#: inc/classes/admin/page/settingsadvanced.php:34
+msgid "Advanced Settings"
+msgstr ""
+
+#: inc/classes/admin/page/settingsadvanced.php:47
+msgid "Advanced Scheduling Options and Settings."
+msgstr ""
+
+#: inc/classes/admin/page/settingsadvanced.php:54
+msgid "Prefered minimum time"
+msgstr ""
+
+#: inc/classes/admin/page/settingsadvanced.php:65
+msgid "Prefered maxmum time"
+msgstr ""
+
+#: inc/classes/admin/page/settingsadvanced.php:76
+msgid "Days that have higher priority"
+msgstr ""
+
+#: inc/classes/admin/page/settingsadvanced.php:87
+msgid "How frequent to try setup tweets on weekdays"
+msgstr ""
+
+#: inc/classes/admin/page/settingsadvanced.php:98
+msgid "How frequent to try setup tweets on weekends"
+msgstr ""
+
+#: inc/classes/admin/page/settingsadvanced.php:113
+msgid "These options offer some of the more tweakable scheduling arrangements."
+msgstr ""
+
+#: inc/classes/admin/tweetslistmods.php:48
+#: inc/classes/admin/tweetslistmods.php:65
+msgid "Type"
+msgstr ""
+
+#: inc/classes/admin/tweetslistmods.php:50 inc/classes/posttype/tweets.php:46
+msgid "Tweet"
+msgstr ""
+
+#: inc/classes/admin/tweetslistmods.php:51
+#: inc/classes/admin/tweetslistmods.php:66
+msgid "Time"
+msgstr ""
+
+#: inc/classes/admin/tweetslistmods.php:52
+#: inc/classes/admin/tweetslistmods.php:67
+msgid "Status"
+msgstr ""
+
+#: inc/classes/admin/tweetslistmods.php:172
+msgid "Duplicate"
+msgstr ""
+
+#: inc/classes/metabox/retweetbox.php:35
+msgid "Retweet"
+msgstr ""
+
+#: inc/classes/metabox/retweetbox.php:47
+msgid ""
+"NOTE: Having any value in this field will force this to be a retweet, other "
+"values may be ignored."
+msgstr ""
+
+#: inc/classes/metabox/retweetbox.php:48
+msgid "Retweet ID:"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Twitter Scheduler"
+msgstr ""
+
+#: inc/classes/metabox/tweetbox.php:60
+#. translators: 1 = a date and time
+msgid "Current Time: %1$s"
+msgstr ""
+
+#: inc/classes/metabox/tweetbox.php:61
+msgid "Send Time"
+msgstr ""
+
+#: inc/classes/metabox/tweetbox.php:67
+msgid "You can these buttons autofill the time."
+msgstr ""
+
+#: inc/classes/metabox/tweetbox.php:68
+msgid "Set Date and Time to now."
+msgstr ""
+
+#: inc/classes/metabox/tweetbox.php:69
+msgid "Now"
+msgstr ""
+
+#: inc/classes/metabox/tweetbox.php:70
+msgid "Set Date and Time to farthest in future."
+msgstr ""
+
+#: inc/classes/metabox/tweetbox.php:71
+msgid "Farthest"
+msgstr ""
+
+#: inc/classes/posttype/tweets.php:45 inc/classes/posttype/tweets.php:81
+msgid "Tweets"
+msgstr ""
+
+#: inc/classes/posttype/tweets.php:47
+msgid "Item Archives"
+msgstr ""
+
+#: inc/classes/posttype/tweets.php:48
+msgid "Item Attributes"
+msgstr ""
+
+#: inc/classes/posttype/tweets.php:49
+msgid "Parent Item:"
+msgstr ""
+
+#: inc/classes/posttype/tweets.php:50
+msgid "All Tweets"
+msgstr ""
+
+#: inc/classes/posttype/tweets.php:51
+msgid "Schedule New Tweet"
+msgstr ""
+
+#: inc/classes/posttype/tweets.php:52
+msgid "Schedule New"
+msgstr ""
+
+#: inc/classes/posttype/tweets.php:53
+msgid "New Tweet"
+msgstr ""
+
+#: inc/classes/posttype/tweets.php:54
+msgid "Edit Tweet"
+msgstr ""
+
+#: inc/classes/posttype/tweets.php:55
+msgid "Update Tweet"
+msgstr ""
+
+#: inc/classes/posttype/tweets.php:56
+msgid "View Tweet"
+msgstr ""
+
+#: inc/classes/posttype/tweets.php:57
+msgid "View Tweets"
+msgstr ""
+
+#: inc/classes/posttype/tweets.php:58
+msgid "Search Tweet"
+msgstr ""
+
+#: inc/classes/posttype/tweets.php:59
+msgid "Not found"
+msgstr ""
+
+#: inc/classes/posttype/tweets.php:60
+msgid "Not found in Trash"
+msgstr ""
+
+#: inc/classes/posttype/tweets.php:61
+msgid "Attached Image"
+msgstr ""
+
+#: inc/classes/posttype/tweets.php:62
+msgid "Set attached image"
+msgstr ""
+
+#: inc/classes/posttype/tweets.php:63
+msgid "Remove attached image"
+msgstr ""
+
+#: inc/classes/posttype/tweets.php:64
+msgid "Use as attached image"
+msgstr ""
+
+#: inc/classes/posttype/tweets.php:65
+msgid "Insert into Tweet"
+msgstr ""
+
+#: inc/classes/posttype/tweets.php:66
+msgid "Uploaded to this Tweet"
+msgstr ""
+
+#: inc/classes/posttype/tweets.php:67
+msgid "Tweets list"
+msgstr ""
+
+#: inc/classes/posttype/tweets.php:68
+msgid "Tweets list navigation"
+msgstr ""
+
+#: inc/classes/posttype/tweets.php:69
+msgid "Filter Tweets list"
+msgstr ""
+
+#: inc/classes/posttype/tweets.php:82
+msgid "A CPT to hold Tweets"
+msgstr ""
+
+#: inc/cron-functions.php:24
+msgid "Once every 5 minutes"
+msgstr ""
+
+#: inc/functions/base.php:48
+#. translators: 1: a url to page in the admin area
+msgid "Almost done. <a href=\"%s\">Setup your API keys</a> to schedule Tweets."
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://www.pattonwebz.com/twitter-scheduler/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "A plugin to help schedule posts for Twitter."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "William Patton"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://www.pattonwebz.com/"
+msgstr ""
+
+#: inc/classes/posttype/tweets.php:43
+msgctxt "Post Type General Name"
+msgid "Tweet"
+msgstr ""
+
+#: inc/classes/posttype/tweets.php:44
+msgctxt "Post Type Singular Name"
+msgid "Tweet"
+msgstr ""

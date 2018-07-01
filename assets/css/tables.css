@@ -1,0 +1,38 @@
+.twsc_readytosend,
+.twsc_already_sent,
+.twsc_is_retweet,
+.twsc_type,
+.twsc_status {
+	text-align: center;
+}
+#twsc_readytosend,
+#twsc_already_sent,
+#twsc_type,
+#twsc_status {
+	width: 75px;
+}
+#twsc_time {
+	width: 165px;
+}
+th#title {
+	width: 220px;
+}
+.twsc-red {
+	color: #f00;
+}
+.twsc-green {
+	color: #08a700;
+}
+.twsc-blue {
+	color: #1DA1F2;
+}
+.twsc_excerpt.column-twsc_excerpt p {
+	color: #585858;
+}
+
+.row-actions span.copy a {
+	color: green;
+}
+.row-actions span.copy a:hover {
+	color: #005000;
+}
