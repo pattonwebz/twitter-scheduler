@@ -43,3 +43,4 @@ before_script:
 script:
   # runs phpcs with the rules from the project, allow warnings not to cause fail.
   - if [[ "$SNIFF" == "1" ]]; then phpcs --standard=phpcs.ruleset.xml $(find . -name '*.php') --runtime-set ignore_warnings_on_exit 1; fi
+  - phpunit
