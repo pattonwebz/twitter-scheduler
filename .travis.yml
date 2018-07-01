@@ -13,6 +13,13 @@ branches:
     - master
     - develop
 
+cache:
+  apt: true
+  directories:
+    - node_modules
+    - vendor
+    - $HOME/.composer/cache
+
 matrix:
     fast_finish: true
 
