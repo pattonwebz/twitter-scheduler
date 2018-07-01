@@ -1,11 +1,11 @@
 <?php
 /**
- * Class SOSC_Helpers_Test
+ * Class HelpersTest
  *
  * @package twitter_scheduler
  */
 
-class SOSC_Helpers_Test extends WP_UnitTestCase {
+class HelpersTest extends WP_UnitTestCase {
 
 	function test_twitter_settings_returns_array() {
 		$settings = \PattonWebz\TwitterScheduler\Helpers\get_twitter_settings();
