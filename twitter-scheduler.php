@@ -34,14 +34,15 @@ if ( ! defined( 'TWSC_POST_TYPE' ) ) {
 	define( 'TWSC_POST_TYPE', 'tweets' );
 }
 
-require_once TWSC_PLUGIN_DIR . 'inc/functions/base.php'; // plugins base setup functions.
-require_once TWSC_PLUGIN_DIR . 'inc/functions/helpers.php'; // some helper functions and setter/getters.
-require_once TWSC_PLUGIN_DIR . 'inc/cron-functions.php'; // handles adding cron schedules and actions.
 
 $autoload = TWSC_PLUGIN_DIR . 'vendor/autoload.php';
 if ( file_exists( $autoload ) ) {
 	require_once $autoload;
 }
+
+require_once TWSC_PLUGIN_DIR . 'inc/functions/base.php'; // plugins base setup functions.
+require_once TWSC_PLUGIN_DIR . 'inc/functions/helpers.php'; // some helper functions and setter/getters.
+require_once TWSC_PLUGIN_DIR . 'inc/cron-functions.php'; // handles adding cron schedules and actions.
 
 /**
  * The main plugin activation/deactivation actions. Used to register the runner
