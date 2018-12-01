@@ -16,28 +16,14 @@ namespace PattonWebz\TwitterScheduler\PostType;
  *
  * @since  0.1.0
  */
-class Tweets {
+class Tweets extends \PattonWebz\PostType\AbstractPostType {
 
 	/**
-	 * Hook in and register the post type.
+	 * The name to use for this post type.
 	 *
-	 * @method register
-	 * @since  0.1.0
+	 * @var string
 	 */
-	public function register() {
-		add_action( 'init', [ $this, 'register_cpt' ], 0 );
-	}
-	/**
-	 * Get the name of this post type.
-	 *
-	 * @method get_name
-	 * @since  0.1.0
-	 *
-	 * @return string
-	 */
-	public function get_name() {
-		return TWSC_POST_TYPE;
-	}
+	public $name = TWSC_POST_TYPE;
 
 	/**
 	 * Get the labels used with this post type.
@@ -109,12 +95,5 @@ class Tweets {
 			'show_in_rest'        => true,
 		);
 	}
-	/**
-	 * Register the CPT used to hold posts.
-	 *
-	 * @since  0.1.0
-	 */
-	public function register_cpt() {
-		register_post_type( $this->get_name(), $this->get_args() );
-	}
+
 }

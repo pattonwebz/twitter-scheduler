@@ -9,9 +9,16 @@
             "email": "will@pattonwebz.com"
         }
     ],
+	"repositories": [
+		{
+            "url": "https://github.com/pattonwebz/post-type-registration.git",
+            "type": "git"
+        }
+	],
 	"require": {
     	"php": ">=7.0",
-        "j7mbo/twitter-api-php": "^1.0"
+        "j7mbo/twitter-api-php": "^1.0",
+		"pattonwebz/post-type-registration": "dev-master"
 	},
 	"autoload": {
 		"psr-4": {
