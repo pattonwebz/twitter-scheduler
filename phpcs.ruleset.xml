@@ -31,5 +31,8 @@
 			<property name="strict_class_file_names" value="false" />
 		</properties>
 	</rule>
+	<rule ref="WordPress.Files.FileName.NotHyphenatedLowercase">
+		<severity>0</severity>
+	</rule>
 
 </ruleset>
